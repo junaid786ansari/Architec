@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Junaid Designer || Architec Template</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3A9ThilykONtQBhi5u8qC8WpP9EQQ854-0g&s">
+	<style type="text/css">
+		*{
+		    box-sizing: border-box;
+		}
+		body{
+		    margin: 0;
+            padding: 0;
+            font-family: verdana;
+            overflow-x: hidden;
+		}
+		/*styling on navbar */
+		.navbar{
+			overflow: hidden;
+			position: fixed;
+			top: 0px;
+			height: auto;
+			width: 100%;
+			background-color: #fffff1; 
+			box-shadow: 2px 1px 10px rgba(0,0,0,0.9);
+			z-index: 1;
+		}
+		.navbar a{
+			float: left;
+			padding: 14px 20px;
+			margin: 0px 4px;
+			font-size: 22px;
+			text-decoration: none;
+			letter-spacing: 5px;
+			color: black;
+		}
+	    .navbar a:hover{
+	    	border-collapse: collapse;
+	    	border-bottom: 2px solid blue;
+	    	text-shadow: 1px 1px;
+	    }
+		.navbar .right-navlinks{
+			float: right;
+		}
+		.navbar .icon {
+    display: none;
+    }
+		/*responsive navbar*/
+		@media only screen and (max-width: 600px) {
+			.container-nav{
+			position: relative;
+			}
+			.right-navlinks a{
+				display: none;
+			}
+			.navbar .icon{
+				float: right;
+        display: block;
+        color: black;
+			}
+			.responsive{
+				position: relative;
+			}
+			.responsive .icon{
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			.responsive a{
+				float: none;
+				display: block;
+				text-align: left;
+			}
+		}
+
+		/*styling on header img*/
+		header {
+			height: 850px;
+		}
+		header p{
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			text-align: center;
+			font-size: 40px;
+			color: white;
+			letter-spacing: 5px;
+			text-shadow: 1px 2px black;
+		}
+		header p b{
+			background-color: #3d425d;
+			border-top-right-radius: 25px;
+			padding: 5px;
+		}
+		/*responsive header*/
+		@media only screen and (max-width: 600px) {
+			header{
+				height: 350px;
+			}
+			header p{
+			position: absolute;
+			top: 30%;
+			width: 100%;
+			font-size: 20px;
+			}
+			header img{
+				height: 335px;
+			}
+		}
+		/*syling on projects*/
+		.multi-image_container{
+			height: 550px;
+		}
+		.header-projects{
+			position: relative;
+		}
+		.header-projects h4{
+			padding: 0 50px;
+			font-size: 25px;
+			line-height: 150px;
+		}
+		hr{
+			width: 93%;
+			position: relative;
+			top: -30px;
+			opacity: 0.3;
+		}
+
+		.image-galery{
+			margin-left: 35px;
+			display: flex;
+			flex-direction: row;
+			width: 25%;
+			box-sizing: border-box;
+		}
+		.image-galery img{
+			margin: 10px;
+		} 
+
+		/*responsive projects*/
+		@media only screen and (max-width: 600px) {
+			#projects{
+				height: 2300px;
+			}
+			.header-projects h4{
+			padding: 0 50px;
+			font-size: 25px;
+			line-height: 150px;
+			margin-top: -50px;
+			
+		}
+			.image-galery{
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			margin: 10px 7px;
+		}
+			.image-galery img{
+			width: 93%;
+			height: 250px;
+		} 
+
+		}
+
+		/*styling on About*/
+		#about h4{
+			font-size: 25px;
+			padding: 0px 50px;
+			padding-top: 50px;
+			line-height: 100px;
+		}
+		#about p{
+			padding: 0px 50px;
+			margin-top: -10px;
+			line-height: 25px;
+			font-size: 15px;
+		}
+		.row-image-profile{
+			margin: 50px 50px;
+			display: flex;
+		}
+		.image-profile{
+			margin: 10px;
+		}
+		.image-profile button:hover{
+			background-color: lightgray;
+			cursor: pointer;
+		}
+		/*responsive about*/
+		@media only screen and (max-width: 600px) {
+		.row-image-profile{
+			margin: 50px 40px;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+		/*styling contact*/
+		#contact h4{
+			font-size: 25px;
+			padding: 0px 50px;
+			line-height: 100px;
+		}
+		#contact p{
+			padding: 0px 50px;
+			margin-top: -10px;
+			line-height: 25px;
+			font-size: 15px;
+		}
+		form {
+			position: relative;
+			overflow: hidden;
+		}
+		form input{
+			width: 93%;
+			padding: 0 10px;
+			margin: 0 50px;
+			height: 45px;
+			font-size: 16px;
+		}
+		form button{
+			width: 200px;
+			padding: 0 10px;
+			margin: 0 50px;
+			height: 45px;
+			background-color: #000;
+			color: #fff;
+			outline: none;
+			border: none;
+			font-size: 16px;
+		}
+		form button:hover{
+			background-color: lightgray;
+			color: #000;
+			cursor: pointer;
+		}
+		/*responsive contact*/
+		@media only screen and (max-width: 600px) {
+			form input{
+			width: 80%;
+			padding: 0 10px;
+			margin: 0 50px;
+			height: 45px;
+			font-size: 16px;
+		}
+		}
+		/*styling location image*/
+		.last-image img{
+		width: 93%;
+		height: auto;
+		margin: 50px 50px;
+		margin-bottom: 0;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	/*responsive location-image*/
+	@media only screen and (max-width: 600px) {
+		.last-image img{
+		width: 95%;
+		height: 300px;
+		margin: 20px 10px;
+		margin-bottom: 0;
+	}
+		}
+	/*styling footer*/
+	footer{
+    height: 130px;
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+  }
+  footer p{
+    padding-top: 60px;
+    color: #fff;
+  }
+  footer p a{
+    color: #fff;
+  }
+  footer p a:hover{
+    color: green;
+  } 
+
+  /*responsive footer*/
+  @media only screen and (max-width: 600px) {
+  	footer{
+  		height: 80px;
+  	}
+  	footer p{
+    padding-top: 30px;
+  }
+  }
+
+
+
+	</style>
+</head>
+<body>
+<!--navbar (sit on top)-->
+<div class="container-nav">
+	<div class="navbar" id="Navbar">
+		<a href="#home"><b>BR</b>Architects</a>
+		<div class="right-navlinks">
+		<a href="#projects">Projects</a>
+		<a href="#about">About</a>
+		<a href="#contact">Contact</a>
+		<!--three dot bar on which click to none float navbar -->
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+		</div>
+	</div>
+</div>
+
+<!--Header-->
+<header id="home">
+	<img src="https://applet3d.com/wp-content/uploads/2022/12/architectural-design-by-zaha-hadid-1024x635.jpeg" alt="Archecture" width="100%" height="auto">
+	<p><b>BR</b>Architects</p>
+</header>
+<!--projects-->
+<div class="multi-image_container" id="projects">
+	<div class="header-projects">
+	<h4>Projects</h4>
+	</div>
+	<hr>
+	<div class="image-galery">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYw4KxykS3_sxJ2C1msCPvT2Ne4OT8ZZ_o0Q&s" alt="Summer House" width="300" height="200">
+		
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTDqnhjl2lkkWa59xSqHYNp8dDJ2tHCg96og&s" alt="Brick House" width="800" height="200">
+		
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKpvCqGI4-FgKWCPAxdF_RW3t7fvfoJksAww&s" alt="Renovated House" width="300" height="200">
+		
+		<img src="https://www.designboom.com/wp-content/uploads/2019/12/niko-architect-house-in-the-landscape-moscow-designboom-1.jpg" alt="Barn House" width="300" height="200">
+		
+	</div>
+	<div class="image-galery">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXjxnMEJPwReIDuHh_2cruq10g6Y6y5NH93g&s" alt="Summer House" width="300" height="200">
+		
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRZbEtWyoHL8gn_XDKJ2KvcqrBP8F0xpQAng&s" alt="Brick House" width="300" height="200">
+		
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK3yv3oXVqvD2irGtKy8iXRoGLmDXBHbKNKw&s" alt="Renovated House" width="300" height="200">
+		
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8nWi58g4vW0ectHXPpmTUnbbKNFIifdrIZg&s" alt="Barn House" width="300" height="200">
+		
+	</div>
+</div>
+
+<!--About-->
+
+<div id="about">
+	<h4>About</h4><br>
+	<hr>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<div class="row-image-profile">
+
+	<div class="image-profile">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL4TzGx1n-0Emcnx3Ad7BeC43lcFzp74Ijpg&s" alt="John" style="width: 100%;">
+		<h4>John Deo</h4>
+		<p style="color: gray;">CEO & Founder</p>
+		<p style="font-size: 15px;">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+		<p><button style="width: 100%; padding: 10px 0px; border: none; font-size: 15px;">Contact</button></p>
+	</div>
+
+	<div class="image-profile">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXqqOUWn4awxsOskr62X6O_jEG2U2x5Qg02Q&s" alt="John" style="width: 100%;">
+		<h4>Jane Deo</h4>
+		<p style="color: gray;">Architect</p>
+		<p style="font-size: 15px;">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+		<p><button style="width: 100%; padding: 10px 0px; border: none; font-size: 15px;">Contact</button></p>
+	</div>
+
+	<div class="image-profile">
+		<img src="https://media.istockphoto.com/id/1413766112/photo/successful-mature-businessman-looking-at-camera-with-confidence.jpg?s=612x612&w=0&k=20&c=NJSugBzNuZqb7DJ8ZgLfYKb3qPr2EJMvKZ21Sj5Sfq4=" alt="John" style="width: 100%;">
+		<h4>Mike Ross</h4>
+		<p style="color: gray;">Architect</p>
+		<p style="font-size: 15px;">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+		<p><button style="width: 100%; padding: 10px 0px; border: none; font-size: 15px;">Contact</button></p>
+	</div>
+
+	<div class="image-profile">
+		<img src="https://www.shutterstock.com/image-photo/happy-middle-aged-business-man-600nw-2306186897.jpg" alt="John" style="width: 100%;">
+		<h4>Dan Star</h4>
+		<p style="color: gray;">Architect</p>
+		<p style="font-size: 15px;">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+		<p><button style="width: 100%; padding: 10px 0px; border: none; font-size: 15px;">Contact</button></p>
+	</div>
+</div>
+
+<!--Contact-->
+<div id="contact">
+	<h4>Contact</h4>
+	<hr>
+	<p>Lets get in touch and talk about your next project.</p>
+	<form action="/action_page.php" target="_blank">
+	  <input  type="text" placeholder="Name" required name="Name"><br><br>
+      <input  type="text" placeholder="Email" required name="Email"><br><br>
+      <input  type="text" placeholder="Subject" required name="Subject"><br><br>
+      <input  type="text" placeholder="Comment" required name="Comment"><br><br>
+      <button  type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+	</form>
+</div>
+<!--location image-->
+<div class="last-image">
+	<img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Delhi-Meerut-Express-Highway-India.png">
+</div>
+<footer>
+	<p>Powered by <a href="">w3.css</a></p>
+</footer>
+</body>
+
+<!-- javscript apply to three dot bar -->
+<script>
+	function myFunction() {
+  var x = document.getElementById("Navbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+
+</html>
